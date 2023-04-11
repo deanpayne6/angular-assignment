@@ -319,7 +319,7 @@
   <form [formGroup]="staffRequest">
     <div>
       <label for="date">Today's Date </label>
-      <input name="date" type="date" id="date" formControlName="TodaysDate" [min]="minDate">
+      <input name="date" type="date" id="date" formControlName="TodaysDate">
     </div>
 
     <div class="form-group">
@@ -334,8 +334,6 @@
       <li>Marketing</li>
     </ul>
   </form>
-
-  <p>Today's Date is : {{TodayDate}}</p>
 
   
 

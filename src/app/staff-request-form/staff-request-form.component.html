@@ -7,7 +7,7 @@
   <h2 style="text-align: center;">Online Staff Request Form</h2>
   <p>Please fill out the following information.</p>
 
-  <form [formGroup]="staffRequest">
+  <form>
 
     <app-date></app-date>
 
@@ -21,27 +21,5 @@
     <div class="spacer"></div>
     <button mat-raised-button color="primary" (click)="onSubmit()">Submit</button>
   </form>
-</div>
 
-<!-- <table ngIf="isFormSubmitted">
-  <thead>
-    <tr>
-      <th>Date</th>
-      <th>Name</th>
-      <th>Department</th>
-      <th>HM Name</th>
-      <th>HM Email</th>
-      
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let staff of staffData">
-      <td>{{ staff.userDate1 }}</td>
-      <td>{{ staff.userName1 }}</td>
-      <td>{{ staff.userDepartment1 }}</td>
-      <td>{{ staff.userHiringManagerName1 }}</td>
-      <td>{{ staff.userHiringManagerEmail1 }}</td>
-     
-    </tr>
-  </tbody>
-</table> -->
+</div>

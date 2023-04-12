@@ -2,8 +2,8 @@
 <mat-form-field appearance="fill">
     <mat-label>Department</mat-label>
     <mat-select>
-    <mat-option *ngFor="let department of departments" [value]="department.value">
-        {{department.viewValue}}
-    </mat-option>
+        <mat-option *ngFor="let department of departments" [value]="department.value">
+            {{department.viewValue}}
+        </mat-option>
     </mat-select>
 </mat-form-field>

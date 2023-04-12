@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-date',
@@ -15,4 +16,7 @@ export class DateComponent {
 
     this.minDate = new Date(currentYear, currentMonth, currentDay);
   }
+
+
+  
 }

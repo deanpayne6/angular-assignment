@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 interface Department {
   value: string;
@@ -12,8 +12,9 @@ interface Department {
 })
 export class DepartmentComponent {
   departments: Department[] = [
-    {value: 'HR-0', viewValue: 'Human Resources'},
-    {value: 'SD-1', viewValue: 'Software Development'},
-    {value: 'M-2', viewValue: 'Marketing'},
+    {value: 'HR-1', viewValue: 'Human Resources'},
+    {value: 'SD-2', viewValue: 'Software Development'},
+    {value: 'M-3', viewValue: 'Marketing'},
   ];
+
 }

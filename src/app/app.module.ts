@@ -20,6 +20,7 @@ import { HiringManagerEmailComponent } from './hiring-manager-email/hiring-manag
 import { SubmitButtonComponent } from './submit-button/submit-button.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { StaffRequestFormComponent } from './staff-request-form/staff-request-form.component';
+import { TableComponent } from './table/table.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { StaffRequestFormComponent } from './staff-request-form/staff-request-fo
     HiringManagerEmailComponent,
     SubmitButtonComponent,
     ToolbarComponent,
-    StaffRequestFormComponent
+    StaffRequestFormComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,
@@ -48,6 +50,6 @@ import { StaffRequestFormComponent } from './staff-request-form/staff-request-fo
     MatTableModule
   ],
   providers: [],
-  bootstrap: [StaffRequestFormComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

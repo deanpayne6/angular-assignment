@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-hiring-manager-email',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./hiring-manager-email.component.css']
 })
 export class HiringManagerEmailComponent {
-
+  
 }

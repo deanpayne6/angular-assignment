@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
+import { FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
+
 
 @Component({
   selector: 'app-job-title',
@@ -6,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./job-title.component.css']
 })
 export class JobTitleComponent {
-
+  
 }

@@ -12,11 +12,27 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSelectModule } from '@angular/material/select';
 import {MatButtonModule} from '@angular/material/button';
 import {MatTableModule} from '@angular/material/table';
+import { DateComponent } from './date/date.component';
+import { JobTitleComponent } from './job-title/job-title.component';
+import { DepartmentComponent } from './department/department.component';
+import { HiringManagerNameComponent } from './hiring-manager-name/hiring-manager-name.component';
+import { HiringManagerEmailComponent } from './hiring-manager-email/hiring-manager-email.component';
+import { SubmitButtonComponent } from './submit-button/submit-button.component';
+import { ToolbarComponent } from './toolbar/toolbar.component';
+import { StaffRequestFormComponent } from './staff-request-form/staff-request-form.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DateComponent,
+    JobTitleComponent,
+    DepartmentComponent,
+    HiringManagerNameComponent,
+    HiringManagerEmailComponent,
+    SubmitButtonComponent,
+    ToolbarComponent,
+    StaffRequestFormComponent
   ],
   imports: [
     BrowserModule,
@@ -32,6 +48,6 @@ import {MatTableModule} from '@angular/material/table';
     MatTableModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [StaffRequestFormComponent]
 })
 export class AppModule { }

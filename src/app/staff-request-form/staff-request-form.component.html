@@ -1,0 +1,47 @@
+<!-- Toolbar -->
+<app-toolbar></app-toolbar>
+
+<div class="content" role="main">
+
+  <!-- Online Form -->
+  <h2 style="text-align: center;">Online Staff Request Form</h2>
+  <p>Please fill out the following information.</p>
+
+  <form [formGroup]="staffRequest">
+
+    <app-date></app-date>
+
+    <app-job-title></app-job-title>
+
+    <app-department></app-department>
+
+    <app-hiring-manager-name></app-hiring-manager-name>
+
+    <app-hiring-manager-email></app-hiring-manager-email>
+    <div class="spacer"></div>
+    <button mat-raised-button color="primary" (click)="onSubmit()">Submit</button>
+  </form>
+</div>
+
+<!-- <table ngIf="isFormSubmitted">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Name</th>
+      <th>Department</th>
+      <th>HM Name</th>
+      <th>HM Email</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let staff of staffData">
+      <td>{{ staff.userDate1 }}</td>
+      <td>{{ staff.userName1 }}</td>
+      <td>{{ staff.userDepartment1 }}</td>
+      <td>{{ staff.userHiringManagerName1 }}</td>
+      <td>{{ staff.userHiringManagerEmail1 }}</td>
+     
+    </tr>
+  </tbody>
+</table> -->

@@ -1,4 +1,5 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Input, EventEmitter } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 
 interface Department {
   value: string;
@@ -11,10 +12,12 @@ interface Department {
   styleUrls: ['./department.component.css']
 })
 export class DepartmentComponent {
+  @Input() staffRequest: FormGroup;
+
   departments: Department[] = [
-    {value: 'HR-1', viewValue: 'Human Resources'},
-    {value: 'SD-2', viewValue: 'Software Development'},
-    {value: 'M-3', viewValue: 'Marketing'},
+    {value: 'Human Resources', viewValue: 'Human Resources'},
+    {value: 'Software Development', viewValue: 'Software Development'},
+    {value: 'Marketing', viewValue: 'Marketing'},
   ];
 
 }

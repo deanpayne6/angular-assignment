@@ -1,7 +1,7 @@
 <h4>Select your department</h4>
-<mat-form-field appearance="fill">
+<mat-form-field appearance="fill" [formGroup]="staffRequest">
     <mat-label>Department</mat-label>
-    <mat-select>
+    <mat-select formControlName="userDepartment">
         <mat-option *ngFor="let department of departments" [value]="department.value">
             {{department.viewValue}}
         </mat-option>

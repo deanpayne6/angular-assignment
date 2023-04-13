@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter, Input } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 
 @Component({
@@ -7,6 +7,8 @@ import { FormGroup } from '@angular/forms';
   styleUrls: ['./date.component.css']
 })
 export class DateComponent {
+  @Input() staffRequest: FormGroup;
+  
   minDate : Date;
 
   constructor(){

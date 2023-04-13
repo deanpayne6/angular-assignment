@@ -1,5 +1,5 @@
 <h4>Enter your Hiring Manager's Email</h4>
-<mat-form-field>
+<mat-form-field [formGroup]="staffRequest">
     <mat-label>Hiring Manager's Email</mat-label>
-    <input matInput placeholder="ex; dean.payne@student.csulb.edu" >
+    <input matInput formControlName="userHiringManagerEmail" placeholder="ex; dean.payne@student.csulb.edu" >
 </mat-form-field>

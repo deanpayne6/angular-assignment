@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter, Input } from '@angular/core';
 import { FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
 
 
@@ -8,5 +8,5 @@ import { FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
   styleUrls: ['./job-title.component.css']
 })
 export class JobTitleComponent {
-  
+  @Input() staffRequest: FormGroup;
 }

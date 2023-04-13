@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
+import { FormGroup, FormControl, ReactiveFormsModule, FormBuilder, Validators } from '@angular/forms';
 import { DataService } from '../data.service';
 
 @Component({
@@ -9,18 +9,23 @@ import { DataService } from '../data.service';
 })
 export class StaffRequestFormComponent implements OnInit{
   
+  staffRequest: FormGroup;
+
+  constructor(private fb: FormBuilder){ }
+
   ngOnInit(): void {
-    
+    this.staffRequest = this.fb.group({
+      userDate: [''],
+      userJobTitle: [''],
+      userDepartment: [''],
+      userHiringManagerName: [''],
+      userHiringManagerEmail: ['']
+    });
+
+    this.staffRequest.valueChanges.subscribe(newVal => console.log(newVal))
   }
-  // staffRequest = new FormGroup({
-  //   userDate : new FormControl(''),
-  //   userJobTitle : new FormControl(''),
-  //   userDepartment : new FormControl(''),
-  //   userHiringManagerName : new FormControl(''),
-  //   userHiringManagerEmail : new FormControl(''),
-  // })
   
   onSubmit(){
-    
+    console.warn(this.staffRequest.value);
   }
 }

@@ -1,5 +1,5 @@
 <h4>Enter your Hiring Manager's Name</h4>
-<mat-form-field>
+<mat-form-field [formGroup]="staffRequest">
     <mat-label>Hiring Manager's Name</mat-label>
-    <input matInput placeholder="ex; Dean Payne" >
+    <input matInput placeholder="ex; Dean Payne" formControlName="userHiringManagerName">
 </mat-form-field>

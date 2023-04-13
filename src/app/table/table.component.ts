@@ -10,16 +10,25 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class TableComponent {
 
-  displayedColumns: string[] = ['Date', 'Job Title', 'Department', 'Hiring Manager Name', 'Hiring Manager Email'];
+  displayedColumns: string[] = ['userDate', 'userJobTitle', 'userDepartment', 'userHiringManagerName', 'userHiringManagerEmail'];
 
   
   @Input() userDataArray: any[];
 
-  userDate: Date;
-  userJobTitle: string;
-  userDepartment: string;
-  userHiringManagerName: string;
-  userHiringManagerEmail: string;
+
+  ngOnInit(){
+    console.log(this.userDataArray);
+  }
+
+  onSubmit(){
+    console.log("Hello", this.userDataArray);
+  }
+
+  // userDate: Date;
+  // userJobTitle: string;
+  // userDepartment: string;
+  // userHiringManagerName: string;
+  // userHiringManagerEmail: string;
 
   
 }

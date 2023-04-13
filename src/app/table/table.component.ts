@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, SimpleChanges } from '@angular/core';
 import { DataService } from '../data.service';
 import { TableData } from '../table-data.model';
 import { FormControl, FormGroup } from '@angular/forms';
@@ -10,6 +10,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class TableComponent {
 
+  dataSource: any;
   displayedColumns: string[] = ['userDate', 'userJobTitle', 'userDepartment', 'userHiringManagerName', 'userHiringManagerEmail'];
 
   
@@ -18,6 +19,7 @@ export class TableComponent {
 
   ngOnInit(){
     console.log(this.userDataArray);
+    this.dataSource = this.userDataArray;
   }
 
   onSubmit(){

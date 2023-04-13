@@ -1,0 +1,24 @@
+<table mat-table [dataSource]="userDataArray">
+    <ng-container matColumnDef="Date">
+        <th mat-header-cell *matHeaderCellDef> Date </th>
+        <td *matCellDef="let element">{{userDate}}</td>
+    </ng-container>
+    <ng-container matColumnDef="Job Title">
+        <th mat-header-cell *matHeaderCellDef> Job Title </th>
+        <td *matCellDef="let element">{{userJobTitle}}</td>
+    </ng-container>
+    <ng-container matColumnDef="Department">
+        <th mat-header-cell *matHeaderCellDef> Department </th>
+        <td *matCellDef="let element">{{userDepartment}}</td>
+    </ng-container>
+    <ng-container matColumnDef="Hiring Manager Name">
+        <th mat-header-cell *matHeaderCellDef> Hiring Manager Name </th>
+        <td *matCellDef="let element">{{userHiringManagerName}}</td>
+    </ng-container>
+    <ng-container matColumnDef="Hiring Manager Email">
+        <th mat-header-cell *matHeaderCellDef> Hiring Manager Email </th>
+        <td *matCellDef="let element">{{userHiringManagerEmail}}</td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

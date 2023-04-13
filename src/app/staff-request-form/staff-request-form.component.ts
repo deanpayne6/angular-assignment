@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormGroup, FormControl, ReactiveFormsModule, FormBuilder, Validators } from '@angular/forms';
 import { DataService } from '../data.service';
+import { TableComponent } from '../table/table.component';
 
 @Component({
   selector: 'app-staff-request-form',
@@ -9,6 +10,8 @@ import { DataService } from '../data.service';
 })
 export class StaffRequestFormComponent implements OnInit{
   
+  userDataArray: any[] = [];
+
   staffRequest: FormGroup;
 
   constructor(private fb: FormBuilder){ }
@@ -26,6 +29,16 @@ export class StaffRequestFormComponent implements OnInit{
   }
   
   onSubmit(){
-    console.warn(this.staffRequest.value);
+
+    this.userDataArray.push({
+      userDate: this.staffRequest.value.userDate, 
+      userJobTitle: this.staffRequest.value.userJobTitle,
+      userDepartment: this.staffRequest.value.userDepartment,
+      userHiringManagerName: this.staffRequest.value.userHiringManagerName,
+      userHiringManagerEmail: this.staffRequest.value.userHiringManagerEmail
+    });
+
+    console.log(this.userDataArray);
+
   }
 }

@@ -34,7 +34,8 @@ import { TableComponent } from './table/table.component';
     SubmitButtonComponent,
     ToolbarComponent,
     StaffRequestFormComponent,
-    TableComponent
+    TableComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -47,7 +48,7 @@ import { TableComponent } from './table/table.component';
     BrowserAnimationsModule,
     MatSelectModule,
     MatButtonModule,
-    MatTableModule
+    MatTableModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
